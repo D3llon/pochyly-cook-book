@@ -12,7 +12,7 @@
                     Vitaj, {{ auth()->user()->name }}!
                 </div>
                 <div class="px-6 py-6 dark:text-white">
-                    Dneska ({{ \Carbon\Carbon::now()->format('l d.m.Y') }}) {{ $dailyMenu ? 'máme na objed:' : 'si neco mosíš najít v ledničke.' }}
+                    Dnes ({{ \Carbon\Carbon::now()->format('l d.m.Y') }}) {{ $dailyMenu ? 'máme na obed:' : 'si niečo musíš nájsť v chladničke.' }}
                     @if($dailyMenu)
                         @if($dailyMenu->soup)
                             <p class="font-semibold text-xl">
@@ -30,7 +30,7 @@
                         </p>
                         @if($dailyMenu->cook)
                             <p class="font-semibold">
-                                Kuchtík dnešného objeda je {{ $dailyMenu->cook->name }}
+                                Kuchtík dnešného obeda je {{ $dailyMenu->cook->name }}
                             </p>
                         @endif
                     @endif
