@@ -34,6 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::group(['as' => 'menu.', 'prefix' => 'menu'], function () {
         Route::controller(MenuController::class)->group(function () {
             Route::get('/', 'index')->name('index');
+            Route::get('add', 'add')->name('add');
+            Route::post('store', 'store')->name('store');
         });
     });
 });

@@ -16,7 +16,10 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
-                        Zeznam menu
+                        Zoznam menu
+                    </x-nav-link>
+                    <x-nav-link :href="route('menu.add')" :active="request()->routeIs('menu.add')">
+                        Pridať menu
                     </x-nav-link>
                 </div>
             </div>
