@@ -18,7 +18,7 @@
                             @if($menus->count() > 0)
                                 @foreach($menus as $menu)
                                     <tr>
-                                        <td class="border border-slate-600">{{ \Carbon\Carbon::parse($menu->date)->format('d.m.Y') }}</td>
+                                        <td class="border border-slate-600">{{ \Carbon\Carbon::parse($menu->date)->format('l d.m.Y') }}</td>
                                         <td class="border border-slate-600">{{ $menu->cook?->name ?? '-' }}</td>
                                         <td class="border border-slate-600">{{ $menu->soup?->name ?? '-' }}</td>
                                         <td class="border border-slate-600">{{ $menu->mainCourse?->name ?? '-' }}</td>
